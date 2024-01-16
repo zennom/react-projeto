@@ -9,6 +9,8 @@ const Page = () =>{
       
       <Square />
 
+      <Circle />
+
     </div>
   )
 }
