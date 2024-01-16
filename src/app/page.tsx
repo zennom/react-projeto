@@ -1,5 +1,7 @@
-/* importe o Circle */
-import { Square , Circle} from "@/components/Square" 
+import { Square , Circle} from "@/components/Geo" 
+
+import { GeoForm } from "@/components/GeoForm"
+
 const Page = () =>{
   return(
     <div>
@@ -7,9 +9,7 @@ const Page = () =>{
       <h3>Algum outro texto</h3>
 
       
-      <Square />
-
-      <Circle />
+      <GeoForm />
 
     </div>
   )
