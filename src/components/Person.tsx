@@ -1,20 +1,29 @@
-export const Person = () =>{
-    //vamos criar as variáveis
-    const name: string = 'Elon Musk' 
-    const avatar: string = 'https://upload.wikimedia.org/wikipedia/commons/4/49/Elon_Musk_2015.jpg'
+let getWeekDay = () =>{
+    return new Intl.DateTimeFormat('pt-BR',{weekday: 'long'}).format(new Date())
+} 
+
+type Props = {
+    name: string
+    avatar: string
+    roles: string[]
+    address?: string
+}
+//reduzindo ainda mais o código no parâmetro
+export const Person = ({name,avatar,roles}: Props) =>{
+
     return(
         <>
-           <h1>Elon Musk</h1>
+           <h1 style={{color:'red',fontSize:'30px'}}>Nome: {name} - {getWeekDay()}</h1>
 
-           <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Elon_Musk_2015.jpg" 
-           alt="Elon Musk" 
+           <img src={avatar} 
+           alt={name}
            
            className="w-40"
            
            />
             <ul>
-                <li>CEO da Tesla</li>
-                <li>CEO da SpaceX</li>
+                <li>{roles[0]}</li>
+                <li>{roles[1]}</li>
             </ul>
         </>
     )
