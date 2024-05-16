@@ -25,6 +25,11 @@ const Page = () =>{
       
       />
 
+      <Person
+          name='João'
+          roles={['Ceo de Algo','Dono de Alguma coisa']}
+      />
+
     </div>
   )
 }

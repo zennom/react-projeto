@@ -4,12 +4,12 @@ let getWeekDay = () =>{
 
 type Props = {
     name: string
-    avatar: string
+    avatar?: string
     roles: string[]
     address?: string
 }
-//reduzindo ainda mais o código no parâmetro
-export const Person = ({name,avatar,roles}: Props) =>{
+export const Person = ({name,
+    avatar = 'https://static.vecteezy.com/ti/vetor-gratis/p1/9734564-default-avatar-profile-icon-of-social-media-user-vetor.jpg',roles}: Props) =>{
 
     return(
         <>
