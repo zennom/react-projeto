@@ -8,7 +8,7 @@ const Page = () =>{
       <h1 className="font-bold text-lg">Olá Mundo</h1>
       <h3>Algum outro texto</h3>
 
-      <Card phrase="Alguma frase TOP" author="Algum cara"/>
+      <Card phrase="Alguma frase TOP"/>
 
     </div>
   )
