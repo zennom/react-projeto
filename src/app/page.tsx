@@ -1,14 +1,19 @@
-import { GeoForm } from "@/components/GeoForm"
-import { Person } from "@/components/Person"
-import {Card} from "@/components/Card"
-import { Circle } from "@/components/Geo"
+import { peopleList} from '@/data/peopleList'
+
 const Page = () =>{
-  return(
+
+  return (
     <div>
-      <h1 className="font-bold text-lg">Olá Mundo</h1>
+      <h1 className="font-bold text-2xl">Olá Mundo</h1>
       <h3>Algum outro texto</h3>
 
-      <Card phrase="Alguma frase TOP"/>
+       {/* use sempre o key quando usar map pois
+       ele precia ser mapeado */}
+      <ul>
+        {peopleList.map(person => 
+        <li key={person.id}>{person.name} - {person.profession}</li>
+        )}
+      </ul>
 
     </div>
   )
